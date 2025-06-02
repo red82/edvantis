@@ -15,12 +15,15 @@ df = pd.DataFrame(data, columns=columns)
 
 # Filtering by belt level
 black_belts = df[df["Belt Level"] == "Black"]
+print(f"Number of Black Belts: {len(black_belts)}")
 
 # Calculation
 df["Efficiency Score"] = (df["Sparring Wins"] - df["Sparring Losses"]) * df["Endurance (rounds)"]
 
 # Top-5 by attendance
 top_attendance = df.sort_values(by="Total Attendance", ascending=False).head(5)
+print("Top 5 Members by Attendance:")
+print(top_attendance[["Name", "Total Attendance"]])
 
 # Save intermediate file
 df.to_excel("outputs/processed_stats.xlsx", index=False)
