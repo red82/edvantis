@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "mma-analytics"
+version = "0.1.0"
+description = "MMA Club statistics automation with Excel and PowerPoint"
+authors = ["Andrii Redkin <andreyredkin82@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+openpyxl = "^3.1.2"
+python-pptx = "^0.6.21"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
